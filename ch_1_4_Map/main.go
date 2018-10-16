@@ -1,14 +1,15 @@
 package main
 
 func main() {
-	var myTodoList TodoList
+	var myTodoList = NewTodoList()
 	myTodoList.Add("Wake up")
 	myTodoList.Add("Shower")
 	myTodoList.Add("Have breakfast")
 	myTodoList.Add("Go to work")
 	myTodoList.Display()
+	myTodoList.MarkAsDone("Wake up")
 	myTodoList.Remove("Have breakfast")
-	myTodoList.Display()
 	myTodoList.Rename("Shower", "Take bath")
-	myTodoList.Display()
+	myTodoList.MarkAsDone("Take bath")
+	myTodoList.MarkAsDone("Go to work")
 }
